@@ -55,24 +55,26 @@ ol {
   align-items: end;
   gap: 30px;
   width: 1140px;
-  height: 534px;
 }
 
 .result__video-container {
   width: 711px;
-  height: 376px;
-  margin-bottom: 32px;
   position: relative;
 }
 
-video {
-  width: 711px;
+.result__video {
+  width: 100%;
+  height: 386px;
   object-fit: cover;
 }
 
 .search-form {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  height: 54px;
+  margin-top: 10px;
+  align-self: flex-end;
 }
 
 .search-form__fieldset-title {
@@ -90,7 +92,7 @@ video {
   width: fit-content;
   gap: 5px;
   cursor: pointer;
-  padding-top: 4px;
+  align-self: center;
 }
 
 .search-form__label:hover {
@@ -117,7 +119,7 @@ video {
   border-width: 1px 0px 1px 0px;
   border-style: solid;
   border-color: #fff;
-  line-height: 21.6px;
+  line-height: 21px;
 }
 
 .search-form__textfield:focus {
@@ -155,12 +157,14 @@ video {
 }
 
 .title {
-  font-family: Oswald;
+  font-family: Oswald, Impact, sans-serif;
   font-size: 75px;
   font-weight: 700;
   line-height: 70.5px;
   text-transform: uppercase;
   margin-bottom: 17px;
+  height: 214px;
+  margin-top: 5px;
 }
 
 .content__accent {
@@ -169,16 +173,15 @@ video {
 
 .content__list {
   height: 298px;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
-
-.content__list-item:not(:nth-last-of-type(2)) {
-  margin-bottom: 28px;
+.content__list-item:not(:last-of-type) {
+  margin-bottom: 33px;
 }
 
 .content__details {
   width: 100%;
-  height: 100%;
+  height: 534px;
   position: relative;
 }
 
@@ -189,19 +192,19 @@ video {
   line-height: 21.6px;
 }
 
-.content__video-card:hover {
-  text-decoration: underline;
-}
-
-.content__video-card:active {
-  background-color: #545050;
-}
-
 .content__card-link {
   text-decoration: none;
   color: #fff;
   display: block;
   margin: 3px;
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
+}
+
+.content__card-link:active {
+  background-color: #545050;
 }
 
 .content__card-link:focus {
@@ -225,13 +228,17 @@ video {
 }
 
 .content__video-card-title {
-  font-family: Oswald;
+  font-family: Oswald, Impact, sans-serif;
   font-size: 30px;
   font-weight: 700;
   line-height: 30px;
   text-transform: uppercase;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   margin-bottom: 6px;
   margin-top: 6px;
+  max-width: 190px;
 }
 
 .content__video-card-description {
@@ -275,5 +282,4 @@ video {
 
 .more-button {
   width: 100%;
-  margin-top: 30px;
 }
